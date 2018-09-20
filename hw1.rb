@@ -1,20 +1,16 @@
 def squared_sum(a, b)
-  # Q1 CODE HERE
-
+  (a + b) ** 2
 end
 
 def sort_array_plus_one(a)
-  # Q2 CODE HERE
-
+  a.map {|a| a + 1}.sort
 end
 
 def combine_name(first_name, last_name)
-  # Q3 CODE HERE
-
+  first_name + ' ' + last_name
 end
 
 def blockin_time(a)
-  # DO NOT EDIT THIS CODE BELOW
   require './foobar'
   Foobar.baz a
 end
@@ -48,5 +44,9 @@ def scrabble(word)
     y: 4,
     z: 10,
   }
-  # Q5 CODE HERE
+  word.chars.map{|a| values[:"#{a}"]}.inject(:+)
 end
+
+
+
+
